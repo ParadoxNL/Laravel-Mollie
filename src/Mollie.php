@@ -47,7 +47,7 @@ class Mollie
                 "redirectUrl" => config('mollie.redirect_url'),
                 "webhookUrl" => config('mollie.webhook_url'),
                 "method" => $type,
-                "metadata" => array_merge([
+                "metadata" => array_merge([ 
                     "order_id" => $id,
                 ], $extra)
             ], $parameters));

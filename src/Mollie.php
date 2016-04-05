@@ -38,10 +38,10 @@ class Mollie
      * @param array $extra
      * @return \Mollie_API_Object_Payment
      */
-    public function createPayment($id, $amount = 0, $description, $type = Mollie_API_Object_Method::IDEAL, $parameters, $extra = [])
+    public function createPayment($id, $amount = 0, $description, $type = Mollie_API_Object_Method::IDEAL, $parameters = [], $extra = [])
     {
         try {
-            return $this->mollie->payments->create([
+            return $this->mollie->payments->create(array_merge([
                 "amount" => $amount,
                 "description" => $description,
                 "redirectUrl" => config('mollie.redirect_url'),
@@ -49,9 +49,8 @@ class Mollie
                 "method" => $type,
                 "metadata" => array_merge([
                     "order_id" => $id,
-                ], $extra),
-                $parameters
-            ]);
+                ], $extra)
+            ], $parameters));
         } catch (\Mollie_API_Exception $e) {
             throw new BadRequestHttpException($e->getMessage(), $e, 500);
         }

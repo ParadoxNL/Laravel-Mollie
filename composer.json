@@ -1,0 +1,21 @@
+{
+    "name": "paradox-nl/laravel-mollie",
+    "description": "Laravel Wrapper for the Mollie API",
+    "type": "MIT",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert ten Wolde",
+            "email": "robert@paradoxmedia.nl"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "ParadoxNL\\Mollie": "src/"
+        }
+    },
+    "require": {
+        "mollie/mollie-api-php": "1.4.x"
+    },
+    "minimum-stability": "stable"
+}

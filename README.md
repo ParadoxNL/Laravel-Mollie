@@ -36,7 +36,7 @@ The config is now located in ```config/mollie.php```. Here you can set an API ke
 
 ## Methods
 
-This package provides a couple methods straight out of the box, however if you wish to use the native methods you can use the ```getClient()``` and use the native Mollie API client. 
+This package provides a couple methods straight out of the box, however if you wish to use the native methods you can use the ```getClient()``` and use the native Mollie API client.
 
 ### Create payment
 
@@ -93,17 +93,15 @@ Content-Type: application/json; charset=utf-8
 
 ### isPaid
 
-Method to check whether an order is paid or not. 
+Method to check whether an order is paid or not.
 
 ```php
 Mollie::isPaid(Illuminate\Http\Request $request)
-
 ```
 
 #### Returns
 
-```boolean```
-
+boolean
 
 ### isOpen
 
@@ -111,20 +109,18 @@ Method to check whether an order is open.
 
 ```php
 Mollie::isOpen(Illuminate\Http\Request $request)
-
 ```
 
 #### Returns
 
-```boolean```
+boolean
 
 ### History
 
-Method to list all transactions with a pagination, configurable by config. 
+Method to list all transactions with a pagination, configurable by config.
 
 ```php
 Mollie::history()
-
 ```
 
 #### Returns
@@ -137,9 +133,8 @@ Returns the native Mollie API client
 
 ```php
 Mollie::getClient()->nativeMethod()
-
 ```
 
 #### Returns
 
-```Mollie_API_Client```
+Mollie_API_Client

@@ -10,8 +10,8 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "ParadoxNL\\Mollie": "src/"
+        "psr-4": {
+            "ParadoxNL\\Mollie\\": "src/"
         }
     },
     "require": {
